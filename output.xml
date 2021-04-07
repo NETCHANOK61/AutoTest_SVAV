@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0 (Python 3.9.2 on win32)" generated="20210401 16:10:08.601" rpa="false" schemaversion="2">
+<suite id="s1" name="Siamzone" source="C:\Users\Lenovo\robot\siamzone.robot">
+<test id="s1-t1" name="เลือกเมนู ภาพยนตร์&gt;วันเข้าฉาย ใน siamzone">
+<kw name="Open Siamzone" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.siamzone.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210401 16:10:09.516" level="INFO">Opening browser 'chrome' to base url 'https://www.siamzone.com/'.</msg>
+<status status="PASS" starttime="20210401 16:10:09.514" endtime="20210401 16:10:15.406"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>เรื่องเด่นประเด็นดัง</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210401 16:10:15.407" endtime="20210401 16:10:15.452"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>สงวนลิขสิทธิ์ © สยามโซน.คอม</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210401 16:10:15.506" level="INFO">Current page contains text 'สงวนลิขสิทธิ์ © สยามโซน.คอม'.</msg>
+<status status="PASS" starttime="20210401 16:10:15.452" endtime="20210401 16:10:15.507"/>
+</kw>
+<status status="PASS" starttime="20210401 16:10:09.512" endtime="20210401 16:10:15.507"/>
+</kw>
+<kw name="Menu movie">
+<arg>//*[@id="navbarSZ"]/div/div[2]/a</arg>
+<arg>วันเข้าฉาย</arg>
+<arg>//*[@id="navbarSZ"]/div/div[2]/div/a[1]</arg>
+<arg>เข้าฉายแล้ววันนี้</arg>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Main_menu}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20210401 16:10:15.514" level="INFO">Simulating Mouse Over on element '//*[@id="navbarSZ"]/div/div[2]/a'.</msg>
+<status status="PASS" starttime="20210401 16:10:15.512" endtime="20210401 16:10:15.969"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${Word_menu}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210401 16:10:15.970" endtime="20210401 16:10:16.752"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Menu_sub}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210401 16:10:16.754" level="INFO">Clicking element '//*[@id="navbarSZ"]/div/div[2]/div/a[1]'.</msg>
+<status status="PASS" starttime="20210401 16:10:16.753" endtime="20210401 16:10:30.499"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${FIRST_TEXT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210401 16:10:30.499" endtime="20210401 16:10:30.699"/>
+</kw>
+<status status="PASS" starttime="20210401 16:10:15.509" endtime="20210401 16:10:30.700"/>
+</kw>
+<status status="PASS" starttime="20210401 16:10:09.505" endtime="20210401 16:10:30.708"/>
+</test>
+<test id="s1-t2" name="เลือกเมนู เพลง&gt;วันเข้าฉาย ใน siamzone">
+<kw name="Open Siamzone" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.siamzone.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210401 16:10:30.727" level="INFO">Opening browser 'chrome' to base url 'https://www.siamzone.com/'.</msg>
+<status status="PASS" starttime="20210401 16:10:30.726" endtime="20210401 16:10:39.596"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>เรื่องเด่นประเด็นดัง</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210401 16:10:39.596" endtime="20210401 16:10:39.647"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>สงวนลิขสิทธิ์ © สยามโซน.คอม</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210401 16:10:39.704" level="INFO">Current page contains text 'สงวนลิขสิทธิ์ © สยามโซน.คอม'.</msg>
+<status status="PASS" starttime="20210401 16:10:39.648" endtime="20210401 16:10:39.704"/>
+</kw>
+<status status="PASS" starttime="20210401 16:10:30.724" endtime="20210401 16:10:39.705"/>
+</kw>
+<kw name="Menu movie">
+<arg>//*[@id="navbarSZ"]/div/div[3]/a</arg>
+<arg>เนื้อเพลงไทย</arg>
+<arg>//*[@id="navbarSZ"]/div/div[3]/div/a[1]</arg>
+<arg>เนื้อเพลง</arg>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Main_menu}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20210401 16:10:39.709" level="INFO">Simulating Mouse Over on element '//*[@id="navbarSZ"]/div/div[3]/a'.</msg>
+<status status="PASS" starttime="20210401 16:10:39.708" endtime="20210401 16:10:45.204"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${Word_menu}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210401 16:10:45.205" endtime="20210401 16:10:45.244"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Menu_sub}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210401 16:10:45.245" level="INFO">Clicking element '//*[@id="navbarSZ"]/div/div[3]/div/a[1]'.</msg>
+<status status="PASS" starttime="20210401 16:10:45.244" endtime="20210401 16:11:10.249"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${FIRST_TEXT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210401 16:11:10.250" endtime="20210401 16:11:10.454"/>
+</kw>
+<status status="PASS" starttime="20210401 16:10:39.706" endtime="20210401 16:11:10.455"/>
+</kw>
+<status status="PASS" starttime="20210401 16:10:30.712" endtime="20210401 16:11:10.464"/>
+</test>
+<status status="PASS" starttime="20210401 16:10:08.609" endtime="20210401 16:11:10.496"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Siamzone">Siamzone</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
