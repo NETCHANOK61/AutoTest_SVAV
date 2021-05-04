@@ -1,122 +1,314 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0 (Python 3.9.2 on win32)" generated="20210401 16:10:08.601" rpa="false" schemaversion="2">
+<robot generator="Robot 4.0 (Python 3.9.2 on win32)" generated="20210504 14:49:13.494" rpa="false" schemaversion="2">
 <suite id="s1" name="Siamzone" source="C:\Users\Lenovo\robot\siamzone.robot">
-<test id="s1-t1" name="เลือกเมนู ภาพยนตร์&gt;วันเข้าฉาย ใน siamzone">
-<kw name="Open Siamzone" type="SETUP">
+<test id="s1-t1" name="TestCase01 ค้นหากระทู้จากเมนู เว็บบอร์ด หมวดหมู่ห้องเทคโนโลยี ด้วยคำที่สะกดถูกต้อง (ภาษาไทย)">
+<kw name="Open Website" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://www.siamzone.com/</arg>
+<arg>https://www.siamzone.com/board/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210401 16:10:09.516" level="INFO">Opening browser 'chrome' to base url 'https://www.siamzone.com/'.</msg>
-<status status="PASS" starttime="20210401 16:10:09.514" endtime="20210401 16:10:15.406"/>
+<msg timestamp="20210504 14:49:15.701" level="INFO">Opening browser 'chrome' to base url 'https://www.siamzone.com/board/'.</msg>
+<status status="PASS" starttime="20210504 14:49:15.698" endtime="20210504 14:49:30.455"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>เรื่องเด่นประเด็นดัง</arg>
+<arg>เว็บบอร์ด</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20210401 16:10:15.407" endtime="20210401 16:10:15.452"/>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>สงวนลิขสิทธิ์ © สยามโซน.คอม</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20210401 16:10:15.506" level="INFO">Current page contains text 'สงวนลิขสิทธิ์ © สยามโซน.คอม'.</msg>
-<status status="PASS" starttime="20210401 16:10:15.452" endtime="20210401 16:10:15.507"/>
-</kw>
-<status status="PASS" starttime="20210401 16:10:09.512" endtime="20210401 16:10:15.507"/>
-</kw>
-<kw name="Menu movie">
-<arg>//*[@id="navbarSZ"]/div/div[2]/a</arg>
-<arg>วันเข้าฉาย</arg>
-<arg>//*[@id="navbarSZ"]/div/div[2]/div/a[1]</arg>
-<arg>เข้าฉายแล้ววันนี้</arg>
-<kw name="Mouse Over" library="SeleniumLibrary">
-<arg>${Main_menu}</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20210401 16:10:15.514" level="INFO">Simulating Mouse Over on element '//*[@id="navbarSZ"]/div/div[2]/a'.</msg>
-<status status="PASS" starttime="20210401 16:10:15.512" endtime="20210401 16:10:15.969"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>${Word_menu}</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20210401 16:10:15.970" endtime="20210401 16:10:16.752"/>
+<status status="PASS" starttime="20210504 14:49:30.458" endtime="20210504 14:49:30.901"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${Menu_sub}</arg>
+<arg>//*[@id="content"]/div/ul/li[3]/div/div/a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210401 16:10:16.754" level="INFO">Clicking element '//*[@id="navbarSZ"]/div/div[2]/div/a[1]'.</msg>
-<status status="PASS" starttime="20210401 16:10:16.753" endtime="20210401 16:10:30.499"/>
+<msg timestamp="20210504 14:49:30.906" level="INFO">Clicking element '//*[@id="content"]/div/ul/li[3]/div/div/a'.</msg>
+<status status="PASS" starttime="20210504 14:49:30.901" endtime="20210504 14:49:39.615"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>${FIRST_TEXT}</arg>
+<arg>${CONTENT}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20210401 16:10:30.499" endtime="20210401 16:10:30.699"/>
+<status status="PASS" starttime="20210504 14:49:39.616" endtime="20210504 14:49:40.047"/>
 </kw>
-<status status="PASS" starttime="20210401 16:10:15.509" endtime="20210401 16:10:30.700"/>
+<status status="PASS" starttime="20210504 14:49:15.695" endtime="20210504 14:49:40.051"/>
 </kw>
-<status status="PASS" starttime="20210401 16:10:09.505" endtime="20210401 16:10:30.708"/>
+<kw name="find blog IT">
+<arg>หูฟัง</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_TEXT}</arg>
+<arg>${SEARCH}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210504 14:49:40.090" level="INFO">Typing text 'หูฟัง' into text field '//input[@class="uk-search-field uk-form-width-medium"]'.</msg>
+<status status="PASS" starttime="20210504 14:49:40.087" endtime="20210504 14:49:40.658"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${INPUT_TEXT}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210504 14:49:40.666" level="INFO">Sending key(s) ('RETURN',) to //input[@class="uk-search-field uk-form-width-medium"] element.</msg>
+<msg timestamp="20210504 14:49:41.252" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20210504 14:49:41.253" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20210504 14:49:40.660" endtime="20210504 14:49:41.786"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20210504 14:49:41.903" level="INFO">${handles} = ['CDwindow-E9FC96F357FC668761828C706DCA2F93', 'CDwindow-87A83BDA4CE3707589B962B6F58FB658']</msg>
+<status status="PASS" starttime="20210504 14:49:41.787" endtime="20210504 14:49:41.903"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20210504 14:49:41.904" endtime="20210504 14:49:42.895"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${CHECKWORD}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210504 14:49:42.900" endtime="20210504 14:49:51.108"/>
+</kw>
+<status status="PASS" starttime="20210504 14:49:40.084" endtime="20210504 14:49:51.109"/>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" starttime="20210504 14:49:51.189" endtime="20210504 14:49:53.907"/>
+</kw>
+<status status="PASS" starttime="20210504 14:49:15.678" endtime="20210504 14:49:53.945"/>
 </test>
-<test id="s1-t2" name="เลือกเมนู เพลง&gt;วันเข้าฉาย ใน siamzone">
-<kw name="Open Siamzone" type="SETUP">
+<test id="s1-t2" name="TestCase02 ค้นหากระทู้จากเมนู เว็บบอร์ด หมวดหมู่ห้องเทคโนโลยี ด้วยคำที่สะกดถูกต้อง (ภาษาอังกฤษ)">
+<kw name="Open Website" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://www.siamzone.com/</arg>
+<arg>https://www.siamzone.com/board/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210401 16:10:30.727" level="INFO">Opening browser 'chrome' to base url 'https://www.siamzone.com/'.</msg>
-<status status="PASS" starttime="20210401 16:10:30.726" endtime="20210401 16:10:39.596"/>
+<msg timestamp="20210504 14:49:54.469" level="INFO">Opening browser 'chrome' to base url 'https://www.siamzone.com/board/'.</msg>
+<status status="PASS" starttime="20210504 14:49:54.465" endtime="20210504 14:50:11.650"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>เรื่องเด่นประเด็นดัง</arg>
+<arg>เว็บบอร์ด</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20210401 16:10:39.596" endtime="20210401 16:10:39.647"/>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>สงวนลิขสิทธิ์ © สยามโซน.คอม</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20210401 16:10:39.704" level="INFO">Current page contains text 'สงวนลิขสิทธิ์ © สยามโซน.คอม'.</msg>
-<status status="PASS" starttime="20210401 16:10:39.648" endtime="20210401 16:10:39.704"/>
-</kw>
-<status status="PASS" starttime="20210401 16:10:30.724" endtime="20210401 16:10:39.705"/>
-</kw>
-<kw name="Menu movie">
-<arg>//*[@id="navbarSZ"]/div/div[3]/a</arg>
-<arg>เนื้อเพลงไทย</arg>
-<arg>//*[@id="navbarSZ"]/div/div[3]/div/a[1]</arg>
-<arg>เนื้อเพลง</arg>
-<kw name="Mouse Over" library="SeleniumLibrary">
-<arg>${Main_menu}</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20210401 16:10:39.709" level="INFO">Simulating Mouse Over on element '//*[@id="navbarSZ"]/div/div[3]/a'.</msg>
-<status status="PASS" starttime="20210401 16:10:39.708" endtime="20210401 16:10:45.204"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>${Word_menu}</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20210401 16:10:45.205" endtime="20210401 16:10:45.244"/>
+<status status="PASS" starttime="20210504 14:50:11.651" endtime="20210504 14:50:11.706"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${Menu_sub}</arg>
+<arg>//*[@id="content"]/div/ul/li[3]/div/div/a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210401 16:10:45.245" level="INFO">Clicking element '//*[@id="navbarSZ"]/div/div[3]/div/a[1]'.</msg>
-<status status="PASS" starttime="20210401 16:10:45.244" endtime="20210401 16:11:10.249"/>
+<msg timestamp="20210504 14:50:11.709" level="INFO">Clicking element '//*[@id="content"]/div/ul/li[3]/div/div/a'.</msg>
+<status status="PASS" starttime="20210504 14:50:11.707" endtime="20210504 14:50:22.106"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>${FIRST_TEXT}</arg>
+<arg>${CONTENT}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20210401 16:11:10.250" endtime="20210401 16:11:10.454"/>
+<status status="PASS" starttime="20210504 14:50:22.106" endtime="20210504 14:50:22.176"/>
 </kw>
-<status status="PASS" starttime="20210401 16:10:39.706" endtime="20210401 16:11:10.455"/>
+<status status="PASS" starttime="20210504 14:49:54.459" endtime="20210504 14:50:22.177"/>
 </kw>
-<status status="PASS" starttime="20210401 16:10:30.712" endtime="20210401 16:11:10.464"/>
+<kw name="find blog IT">
+<arg>apple watch</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_TEXT}</arg>
+<arg>${SEARCH}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210504 14:50:22.182" level="INFO">Typing text 'apple watch' into text field '//input[@class="uk-search-field uk-form-width-medium"]'.</msg>
+<status status="PASS" starttime="20210504 14:50:22.180" endtime="20210504 14:50:22.771"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${INPUT_TEXT}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210504 14:50:22.774" level="INFO">Sending key(s) ('RETURN',) to //input[@class="uk-search-field uk-form-width-medium"] element.</msg>
+<msg timestamp="20210504 14:50:24.794" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20210504 14:50:24.795" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20210504 14:50:22.771" endtime="20210504 14:50:25.740"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20210504 14:50:25.878" level="INFO">${handles} = ['CDwindow-F18CC235F6A41527E180A66E902A70DB', 'CDwindow-4B70556F47DF48E2CA52D54271C70D6B']</msg>
+<status status="PASS" starttime="20210504 14:50:25.741" endtime="20210504 14:50:25.879"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20210504 14:50:25.879" endtime="20210504 14:50:27.372"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${CHECKWORD}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210504 14:50:27.372" endtime="20210504 14:50:41.933"/>
+</kw>
+<status status="PASS" starttime="20210504 14:50:22.179" endtime="20210504 14:50:41.934"/>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" starttime="20210504 14:50:41.943" endtime="20210504 14:50:42.284"/>
+</kw>
+<status status="PASS" starttime="20210504 14:49:54.289" endtime="20210504 14:50:42.286"/>
 </test>
-<status status="PASS" starttime="20210401 16:10:08.609" endtime="20210401 16:11:10.496"/>
+<test id="s1-t3" name="TestCase03 ค้นหากระทู้จากเมนู เว็บบอร์ด หมวดหมู่ห้องเทคโนโลยี ด้วยคำที่สะกดไม่ถูกต้อง (ภาษาไทย)">
+<kw name="Open Website" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.siamzone.com/board/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210504 14:50:42.344" level="INFO">Opening browser 'chrome' to base url 'https://www.siamzone.com/board/'.</msg>
+<status status="PASS" starttime="20210504 14:50:42.342" endtime="20210504 14:51:32.980"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>เว็บบอร์ด</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210504 14:51:32.981" endtime="20210504 14:51:33.044"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="content"]/div/ul/li[3]/div/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210504 14:51:33.053" level="INFO">Clicking element '//*[@id="content"]/div/ul/li[3]/div/div/a'.</msg>
+<status status="PASS" starttime="20210504 14:51:33.045" endtime="20210504 14:51:41.276"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${CONTENT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210504 14:51:41.276" endtime="20210504 14:51:41.662"/>
+</kw>
+<status status="PASS" starttime="20210504 14:50:42.321" endtime="20210504 14:51:41.663"/>
+</kw>
+<kw name="find blog IT spell error">
+<arg>หูฟง</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_TEXT}</arg>
+<arg>${SEARCH}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210504 14:51:42.039" level="INFO">Typing text 'หูฟง' into text field '//input[@class="uk-search-field uk-form-width-medium"]'.</msg>
+<status status="PASS" starttime="20210504 14:51:42.013" endtime="20210504 14:51:42.857"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${INPUT_TEXT}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210504 14:51:42.881" level="INFO">Sending key(s) ('RETURN',) to //input[@class="uk-search-field uk-form-width-medium"] element.</msg>
+<msg timestamp="20210504 14:51:43.474" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20210504 14:51:43.475" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20210504 14:51:42.861" endtime="20210504 14:51:44.028"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20210504 14:51:44.186" level="INFO">${handles} = ['CDwindow-D4EBF664CC854E364A6B781E6CBDCC55', 'CDwindow-9D99107A153F56055069C941E741FEA9']</msg>
+<status status="PASS" starttime="20210504 14:51:44.031" endtime="20210504 14:51:44.186"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20210504 14:51:44.188" endtime="20210504 14:51:45.146"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${CHECKWORD}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210504 14:51:45.146" endtime="20210504 14:51:49.465"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${NEW_SEARCH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210504 14:51:49.467" level="INFO">Clicking element '//*[@id="___gcse_0"]/div/div/div/div[5]/div[2]/div[1]/div/div[1]/div/div[1]/a'.</msg>
+<status status="PASS" starttime="20210504 14:51:49.466" endtime="20210504 14:51:49.731"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${CHECKWORD2}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210504 14:51:49.732" endtime="20210504 14:51:49.785"/>
+</kw>
+<status status="PASS" starttime="20210504 14:51:41.784" endtime="20210504 14:51:49.786"/>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" starttime="20210504 14:51:49.798" endtime="20210504 14:51:50.712"/>
+</kw>
+<status status="PASS" starttime="20210504 14:50:42.305" endtime="20210504 14:51:50.736"/>
+</test>
+<test id="s1-t4" name="TestCase04 ค้นหากระทู้จากเมนู เว็บบอร์ด หมวดหมู่ห้องเทคโนโลยี ด้วยคำที่สะกดไม่ถูกต้อง (ภาษาอังกฤษ)">
+<kw name="Open Website" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.siamzone.com/board/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210504 14:51:50.773" level="INFO">Opening browser 'chrome' to base url 'https://www.siamzone.com/board/'.</msg>
+<status status="PASS" starttime="20210504 14:51:50.771" endtime="20210504 14:52:07.595"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>เว็บบอร์ด</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210504 14:52:07.596" endtime="20210504 14:52:07.664"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="content"]/div/ul/li[3]/div/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210504 14:52:07.665" level="INFO">Clicking element '//*[@id="content"]/div/ul/li[3]/div/div/a'.</msg>
+<status status="PASS" starttime="20210504 14:52:07.664" endtime="20210504 14:52:18.945"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${CONTENT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210504 14:52:18.946" endtime="20210504 14:52:19.117"/>
+</kw>
+<status status="PASS" starttime="20210504 14:51:50.766" endtime="20210504 14:52:19.118"/>
+</kw>
+<kw name="find blog IT spell error">
+<arg>aple watc</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_TEXT}</arg>
+<arg>${SEARCH}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210504 14:52:19.129" level="INFO">Typing text 'aple watc' into text field '//input[@class="uk-search-field uk-form-width-medium"]'.</msg>
+<status status="PASS" starttime="20210504 14:52:19.127" endtime="20210504 14:52:21.248"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${INPUT_TEXT}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210504 14:52:21.251" level="INFO">Sending key(s) ('RETURN',) to //input[@class="uk-search-field uk-form-width-medium"] element.</msg>
+<msg timestamp="20210504 14:52:21.657" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20210504 14:52:21.657" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20210504 14:52:21.249" endtime="20210504 14:52:22.391"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20210504 14:52:22.621" level="INFO">${handles} = ['CDwindow-A01C014E4D751643A32687CDCA19AAC9', 'CDwindow-78684FDFA41C3CF7AB9207095F32E9E1']</msg>
+<status status="PASS" starttime="20210504 14:52:22.391" endtime="20210504 14:52:22.625"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20210504 14:52:22.626" endtime="20210504 14:52:23.827"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${CHECKWORD}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210504 14:52:23.828" endtime="20210504 14:52:29.503"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${NEW_SEARCH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210504 14:52:29.505" level="INFO">Clicking element '//*[@id="___gcse_0"]/div/div/div/div[5]/div[2]/div[1]/div/div[1]/div/div[1]/a'.</msg>
+<status status="PASS" starttime="20210504 14:52:29.503" endtime="20210504 14:52:30.000"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${CHECKWORD2}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210504 14:52:30.000" endtime="20210504 14:52:30.280"/>
+</kw>
+<status status="PASS" starttime="20210504 14:52:19.126" endtime="20210504 14:52:30.281"/>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" starttime="20210504 14:52:30.284" endtime="20210504 14:52:30.612"/>
+</kw>
+<status status="PASS" starttime="20210504 14:51:50.744" endtime="20210504 14:52:30.638"/>
+</test>
+<status status="PASS" starttime="20210504 14:49:13.503" endtime="20210504 14:52:30.776"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Siamzone">Siamzone</stat>
+<stat pass="4" fail="0" skip="0" id="s1" name="Siamzone">Siamzone</stat>
 </suite>
 </statistics>
 <errors>
